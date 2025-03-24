@@ -7,9 +7,7 @@
 }
 
 .live-editor-title {
-  display: inline-block;
-  /*orwidth: fit-content;
-  */
+  margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-radius: var(--border-radius);
   background-color: var(--background-color-secondary);
@@ -24,17 +22,19 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 0.3rem;
-  background: var(--primary-color);
+  background: rgb(1, 22, 39);
   color: var(--text-color);
   min-width: 50%;
   width: 50%;
+  color: rgb(214, 222, 235);
+  background-color: rgb(1, 22, 39);
 }
 
 .live-editor {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background: var(--praimary-color);
+  background: rgb(1, 22, 39);
   color: var(--text-color);
   font-size: 14px;
   overflow: auto;

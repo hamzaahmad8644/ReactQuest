@@ -30,7 +30,6 @@
 }
 
 .prism-code {
-  margin-top: 1rem !important;
   font-size: 1rem !important;
 }
 
@@ -53,6 +52,12 @@ button {
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+  margin: 0.3rem;
+}
+
+/* Apply margin only to buttons that are NOT the first child */
+button:not(:first-child) {
+  margin-left: 0rem;
 }
 
 button:hover {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import NavMenu from "./NavMenu";
 import "./Navbar.css";
 
@@ -17,7 +18,9 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar-header">
-        <h1>React Concepts and Demos</h1>
+        <h1>
+          <Link to="/">React Concepts and Demos</Link>
+        </h1>
         <button className="hamburger" onClick={toggleMobileMenu}>
           &#9776;
         </button>
