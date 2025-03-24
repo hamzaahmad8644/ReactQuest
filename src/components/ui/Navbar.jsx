@@ -49,9 +49,11 @@ const Navbar = () => {
           title="General Concepts"
           links={[
             { path: "/fragments", label: "Fragments" },
+            { path: "/fetch", label: "Fetch" },
             { path: "/uselocalstorage", label: "Local Storage" },
             { path: "/errorboundary", label: "Error Boundary" },
             { path: "/memocomponent", label: "React.memo" },
+            { path: "/portals", label: "portals" },
             { path: "/hoc", label: "Higher-Order Component" },
             { path: "/renderprops", label: "Render Props" },
             { path: "/lazy", label: "Lazy Loading" },

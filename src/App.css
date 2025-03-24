@@ -10,9 +10,13 @@ body {
 
 /* Demo section styling */
 .demo-section {
-  margin-bottom: 20px;
-  border-radius: 4px;
+  margin-bottom: 1.2rem;
+  border-radius: var(--border-radius);
   width: 100%;
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
 }
 
 @media (max-width: 768px) {

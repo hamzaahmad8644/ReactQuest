@@ -4,29 +4,31 @@ import Layout from "./layout/Layout";
 
 // Basic Hook Demos (from simple to advanced):
 import StateDemoPage from "./concepts/hooks/StateDemo";
-import EffectDemo from "./concepts/hooks/EffectDemo";
-import ContextDemo from "./concepts/hooks/ContextDemo";
-import ReducerDemo from "./concepts/hooks/ReducerDemo";
-import RefDemo from "./concepts/hooks/RefDemo";
-import MemoDemo from "./concepts/hooks/MemoDemo";
-import CallbackDemo from "./concepts/hooks/CallbackDemo";
-import LayoutEffectDemo from "./concepts/hooks/LayoutEffectDemo";
-import ImperativeHandleDemo from "./concepts/hooks/ImperativeHandleDemo";
-import DebugValueDemo from "./concepts/hooks/DebugValueDemo";
-import TransitionDemo from "./concepts/hooks/TransitionDemo";
+import EffectDemoPage from "./concepts/hooks/EffectDemo";
+import ContextDemoPage from "./concepts/hooks/ContextDemo";
+import ReducerDemoPage from "./concepts/hooks/ReducerDemo";
+import RefDemoPage from "./concepts/hooks/RefDemo";
+import MemoDemoPage from "./concepts/hooks/MemoDemo";
+import CallbackDemoPage from "./concepts/hooks/CallbackDemo";
+import LayoutEffectDemoPage from "./concepts/hooks/LayoutEffectDemo";
+import ImperativeHandleDemoPage from "./concepts/hooks/ImperativeHandleDemo";
+import DebugValueDemoPage from "./concepts/hooks/DebugValueDemo";
+import TransitionDemoPage from "./concepts/hooks/TransitionDemo";
 
 // Custom hooks
-import CustomHookDemo from "./concepts/hooks/custom/CustomHookDemo";
+import CustomHookDemoPage from "./concepts/hooks/custom/CustomHookDemo";
 
 // Additional React Concept Components
+import FetchDemoPage from "./concepts/FetchDemo";
 import FragmentsDemoPage from "./concepts/FragmentsDemo";
-import LocalStorageDemo from "./concepts/LocalStorageDemo";
-import ErrorBoundaryDemo from "./concepts/ErrorBoundaryDemo";
-import MemoComponentDemo from "./concepts/MemoComponentDemo"; // React.memo example
-import HigherOrderComponentDemo from "./concepts/HigherOrderComponentDemo";
-import RenderPropsDemo from "./concepts/RenderPropsDemo";
-import LazyLoadingDemo from "./concepts/LazyLoadingDemo";
-import ReduxToolkitDemo from "./concepts/ReduxToolkitDemo"; // Redux Toolkit demo
+import LocalStorageDemoPage from "./concepts/LocalStorageDemo";
+import ErrorBoundaryDemoPage from "./concepts/ErrorBoundaryDemo";
+import MemoComponentDemoPage from "./concepts/MemoComponentDemo"; // React.memo example
+import HigherOrderComponentDemoPage from "./concepts/HigherOrderComponentDemo";
+import PortalsDemoPage from "./concepts/PortalsDemo";
+import RenderPropsDemoPage from "./concepts/RenderPropsDemo";
+import LazyLoadingDemoPage from "./concepts/LazyLoadingDemo";
+import ReduxToolkitDemoPage from "./concepts/ReduxToolkitDemo"; // Redux Toolkit demo
 
 import "./App.css";
 
@@ -37,27 +39,32 @@ function App() {
         <Routes>
           {/* Basic Hooks */}
           <Route path="/state" element={<StateDemoPage />} />
-          <Route path="/effect" element={<EffectDemo />} />
-          <Route path="/context" element={<ContextDemo />} />
-          <Route path="/reducer" element={<ReducerDemo />} />
-          <Route path="/ref" element={<RefDemo />} />
-          <Route path="/memo" element={<MemoDemo />} />
-          <Route path="/callback" element={<CallbackDemo />} />
-          <Route path="/layouteffect" element={<LayoutEffectDemo />} />
-          <Route path="/imperativehandle" element={<ImperativeHandleDemo />} />
-          <Route path="/debugvalue" element={<DebugValueDemo />} />
-          <Route path="/transition" element={<TransitionDemo />} />
-          <Route path="/customhook" element={<CustomHookDemo />} />
+          <Route path="/effect" element={<EffectDemoPage />} />
+          <Route path="/context" element={<ContextDemoPage />} />
+          <Route path="/reducer" element={<ReducerDemoPage />} />
+          <Route path="/ref" element={<RefDemoPage />} />
+          <Route path="/memo" element={<MemoDemoPage />} />
+          <Route path="/callback" element={<CallbackDemoPage />} />
+          <Route path="/layouteffect" element={<LayoutEffectDemoPage />} />
+          <Route
+            path="/imperativehandle"
+            element={<ImperativeHandleDemoPage />}
+          />
+          <Route path="/debugvalue" element={<DebugValueDemoPage />} />
+          <Route path="/transition" element={<TransitionDemoPage />} />
+          <Route path="/customhook" element={<CustomHookDemoPage />} />
 
           {/* Additional Concepts */}
           <Route path="/fragments" element={<FragmentsDemoPage />} />
-          <Route path="/uselocalstorage" element={<LocalStorageDemo />} />
-          <Route path="/errorboundary" element={<ErrorBoundaryDemo />} />
-          <Route path="/memocomponent" element={<MemoComponentDemo />} />
-          <Route path="/hoc" element={<HigherOrderComponentDemo />} />
-          <Route path="/renderprops" element={<RenderPropsDemo />} />
-          <Route path="/lazy" element={<LazyLoadingDemo />} />
-          <Route path="/redux" element={<ReduxToolkitDemo />} />
+          <Route path="/fetch" element={<FetchDemoPage />} />
+          <Route path="/uselocalstorage" element={<LocalStorageDemoPage />} />
+          <Route path="/errorboundary" element={<ErrorBoundaryDemoPage />} />
+          <Route path="/memocomponent" element={<MemoComponentDemoPage />} />
+          <Route path="/portals" element={<PortalsDemoPage />} />
+          <Route path="/hoc" element={<HigherOrderComponentDemoPage />} />
+          <Route path="/renderprops" element={<RenderPropsDemoPage />} />
+          <Route path="/lazy" element={<LazyLoadingDemoPage />} />
+          <Route path="/redux" element={<ReduxToolkitDemoPage />} />
 
           {/* Default Route */}
           <Route path="/" element={<div>Select a demo from the menu.</div>} />
