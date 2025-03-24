@@ -98,4 +98,17 @@ input:focus {
   h1 {
     font-size: 1.5rem;
   }
+} /* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* For Internet Explorer/Edge */
+body {
+  -ms-overflow-style: none;
 }
