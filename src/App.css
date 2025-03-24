@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.demo-with-live {
+  width: 100%;
+}
+
+/* Demo section styling */
+.demo-section {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .demo-section {
+    padding: 0rem 0.5rem;
+  }
+}

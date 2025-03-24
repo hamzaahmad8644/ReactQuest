@@ -1,0 +1,193 @@
+/* General Navbar Styles */
+nav {
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem 0 2rem;
+  box-sizing: border-box;
+  white-space: nowrap;
+  gap: var(--button-gap);
+  align-items: center;
+  align-content: center;
+}
+
+/* Navbar Header: title and hamburger */
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hamburger Icon - hidden on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Navbar Content: container for all NavMenu components */
+.navbar-content {
+  display: flex;
+  gap: var(--button-gap);
+}
+
+/* Desktop NavMenu Styles */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack button and dropdown vertically */
+}
+
+.nav-menu {
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.nav-menu:hover {
+  background: var(--secondary-button);
+}
+
+/* Dropdown Wrapper */
+.nav-list-wrapper {
+  position: absolute;
+  top: 100%; /* Directly below the button */
+  left: 0;
+  background: var(--background-color);
+  min-width: 150px;
+  width: max-content;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Scrollable Container for the Dropdown */
+.scrollable {
+  max-height: 50vh; /* Fixed max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dropdown Container (List) */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Dropdown List Items */
+.nav-list li {
+  padding: 12px 16px;
+  white-space: nowrap;
+  background: var(--background-color);
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  color: var(--text-color);
+  padding: 12px 16px;
+}
+
+.nav-list li:hover {
+  background: var(--secondary-button);
+}
+
+/* Scroll Indicator Icon (Positioned at the bottom of the dropdown wrapper) */
+.scroll-icon {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: var(--text-color);
+  animation: bounce 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(5px);
+  }
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  /* Stack header and nav content vertically */
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+  }
+
+  /* Hide desktop navbar content by default */
+  .navbar-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* When mobile menu is open, show content */
+  .navbar-content.open {
+    display: flex;
+  }
+
+  /* Each nav-dropdown takes full width */
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Make dropdown container static so it pushes content down */
+  .nav-list-wrapper {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .scrollable {
+    max-height: 50vh;
+    width: 100%;
+  }
+
+  .nav-list {
+    width: 100%;
+  }
+}
