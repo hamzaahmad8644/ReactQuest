@@ -111,4 +111,4 @@ _This project is licensed under the \***\*\*\*\*\***MIT License\***\*\*\*\*\***.
 
 _Our mission is to provide a \***\*\*\*\*\***hands-on learning experience\***\*\*\*\*\*** for developers preparing for React.js interviews. Whether you're new to React or brushing up your skills, we hope this project adds value to your learning journey!_
 
-_Happy coding! 🚀_
+## Happy coding! 🚀
