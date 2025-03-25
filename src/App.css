@@ -23,4 +23,13 @@ body {
   .demo-section {
     padding: 0rem 0.5rem;
   }
+  .home-page-heading {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page-heading {
+    font-size: 1.3rem;
+  }
 }

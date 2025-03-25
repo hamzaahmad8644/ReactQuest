@@ -67,7 +67,14 @@ function App() {
           <Route path="/redux" element={<ReduxToolkitDemoPage />} />
 
           {/* Default Route */}
-          <Route path="/" element={<div>Select a demo from the menu.</div>} />
+          <Route
+            path="/"
+            element={
+              <h2 className="home-page-heading">
+                Select a demo from the menu.
+              </h2>
+            }
+          />
         </Routes>
       </Layout>
     </Router>

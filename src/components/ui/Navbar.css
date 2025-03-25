@@ -46,9 +46,9 @@ h1 a {
 }
 
 .nav-menu {
-  background: var(--background-color);
+  background: var(--tertiary-button);
   color: var(--text-color);
-  padding: 10px 16px;
+  /* padding: 0.5rem 0.5rem; */
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -152,13 +152,14 @@ h1 a {
   nav {
     flex-direction: column;
     align-items: stretch;
-    padding: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 0rem 0rem 0.5rem;
   }
 
   /* Show hamburger on mobile */
   .hamburger {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 0rem 0.6rem;
   }
 
   /* Hide desktop navbar content by default */
@@ -166,6 +167,7 @@ h1 a {
     display: none;
     flex-direction: column;
     width: 100%;
+    margin-right: 0.5rem;
   }
 
   /* When mobile menu is open, show content */
@@ -175,18 +177,16 @@ h1 a {
 
   /* Each nav-dropdown takes full width */
   .nav-dropdown {
-    width: 100%;
   }
 
   .nav-menu {
-    width: 100%;
     justify-content: space-between;
   }
 
   /* Make dropdown container static so it pushes content down */
   .nav-list-wrapper {
     position: static;
-    width: 100%;
+    width: 99.2%;
     box-shadow: none;
   }
 
@@ -197,5 +197,21 @@ h1 a {
 
   .nav-list {
     width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .hamburger {
+    padding: 0rem 0.3rem;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 340px) {
+  nav h1 {
+    font-size: 1.3rem;
   }
 }
