@@ -27,8 +27,8 @@
   --selection-text: #000000;
   --border-radius: 0.3rem;
   --button-gap: 1rem;
-  --cursor-primary: url("/public/cursor/SpongeBobCursor.png"), auto;
-  --cursor-pointer: url("../public/cursor/SpongeBobPointer.png"), auto;
+  --cursor-primary: url("/cursor/SpongeBobCursor.png"), auto;
+  --cursor-pointer: url("/cursor/SpongeBobPointer.png"), auto;
 }
 
 :root.light-mode {
