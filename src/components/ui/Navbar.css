@@ -8,11 +8,22 @@ nav {
   gap: var(--button-gap);
   align-items: center;
   align-content: center;
+  justify-content: space-between;
+}
+
+.theme-toggle {
+  background: var(--button-theme-toggle);
+  padding: 0.6rem 1.2rem;
+}
+
+.navbar-controls-container {
+  display: flex;
+  flex-direction: row;
 }
 
 h1 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-color-primary);
 }
 
 /* Navbar Header: title and hamburger */
@@ -29,7 +40,7 @@ h1 a {
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--text-color-primary);
 }
 
 /* Navbar Content: container for all NavMenu components */
@@ -46,9 +57,8 @@ h1 a {
 }
 
 .nav-menu {
-  background: var(--tertiary-button);
-  color: var(--text-color);
-  /* padding: 0.5rem 0.5rem; */
+  background: var(--button-tertiary);
+  color: var(--text-color-primary);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -66,20 +76,24 @@ h1 a {
 }
 
 .nav-menu:hover {
-  background: var(--secondary-button);
+  background: var(--button-secondary);
 }
 
 /* Dropdown Wrapper */
 .nav-list-wrapper {
   position: absolute;
-  top: 100%; /* Directly below the button */
+  top: 100%;
+  /*Directlybelowthebutton*/
   left: 0;
-  background: var(--background-color);
-  min-width: 150px;
+  background: var(--background-color-secondary);
   width: max-content;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
 }
 
 /* Scrollable Container for the Dropdown */
@@ -103,7 +117,7 @@ h1 a {
 /* Dropdown List Items */
 .nav-list li {
   white-space: nowrap;
-  background: var(--background-color);
+  background: var(--background-color-secondary);
   transition: ease-in-out 0.3s ease;
   -webkit-transition: ease-in-out 0.3s ease;
   -moz-transition: ease-in-out 0.3s ease;
@@ -116,26 +130,25 @@ h1 a {
   font-weight: 500;
   display: block;
   width: 100%;
-  color: var(--text-color);
-  padding: 12px 16px;
+  color: var(--text-color-primary);
+  padding: 0.8rem 1rem;
 }
 
 .nav-list li:hover {
-  background: var(--secondary-button);
+  background: var(--button-secondary);
 }
 
 /* Scroll Indicator Icon (Positioned at the bottom of the dropdown wrapper) */
 .scroll-icon {
   position: absolute;
-  bottom: 5px;
+  bottom: 0.3rem;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 20px;
-  color: var(--text-color);
+  font-size: 1.2rem;
+  color: var(--text-color-primary);
   animation: bounce 1.5s infinite;
   pointer-events: none;
 }
-
 @keyframes bounce {
   0%,
   100% {
@@ -153,6 +166,11 @@ h1 a {
     flex-direction: column;
     align-items: stretch;
     padding: 0rem 0rem 0rem 0.5rem;
+  }
+
+  .theme-toggle {
+    background: var(--button-theme-toggle);
+    padding: 0rem 0.5rem;
   }
 
   /* Show hamburger on mobile */
@@ -175,12 +193,9 @@ h1 a {
     display: flex;
   }
 
-  /* Each nav-dropdown takes full width */
-  .nav-dropdown {
-  }
-
   .nav-menu {
     justify-content: space-between;
+    padding: 0.7rem 1rem;
   }
 
   /* Make dropdown container static so it pushes content down */
@@ -206,12 +221,12 @@ h1 a {
   }
 
   nav h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 350px) {
   nav h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }

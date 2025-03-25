@@ -1,8 +1,8 @@
 .live-demo-container {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
   width: 100%;
 }
 
@@ -10,7 +10,7 @@
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  background-color: var(--background-color-secondary);
+  background-color: var(--background-color-tertiary);
   font-size: 1rem;
   -webkit-border-radius: var(--border-radius);
   -moz-border-radius: var(--border-radius);
@@ -19,36 +19,48 @@
 }
 
 .live-preview {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
-  background: rgb(1, 22, 39);
-  color: var(--text-color);
+  padding: 0.6rem;
+  border: 1px solid var(--text-color-primary);
+  border-radius: var(--border-radius);
+  background: var(--code-editor-background);
+  color: var(--text-color-primary);
   min-width: 50%;
   width: 50%;
-  color: rgb(214, 222, 235);
-  background-color: rgb(1, 22, 39);
+  color: var(--text-color-primary);
+  background-color: var(--code-editor-background);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
 }
 
 .live-editor {
-  padding: 10px;
+  padding: 0.6rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  background: rgb(1, 22, 39);
-  color: var(--text-color);
-  font-size: 14px;
+  border-radius: var(--border-radius);
+  background: var(--code-editor-background);
+  color: var(--text-color-primary);
+  font-size: 0.9rem;
   overflow: auto;
   min-width: 50%;
   width: 50%;
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
 }
 
 .live-error {
   color: red !important;
   font-family: monospace;
   background: var(--primary-color);
-  color: var(--text-color);
-  padding: 10px;
-  border-radius: 4px;
+  color: var(--text-color-primary);
+  padding: 0.6rem;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
 }
 
 .live-demo-results-below {
@@ -60,13 +72,13 @@
   margin-left: 0.5rem !important;
   font-size: 1rem;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--text-color-primary);
   display: none;
   transition: transform 0.2s ease;
 }
 
 .undo-arrow:hover {
-  background: var(--secondary-button);
+  background: var(--button-secondary);
   transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
@@ -95,5 +107,11 @@
   .live-error {
     min-width: 100%;
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .undo-arrow {
+    font-size: 1rem;
   }
 }

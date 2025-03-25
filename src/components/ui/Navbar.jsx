@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavMenu from "./NavMenu";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ isLightMode, setIsLightMode }) => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -15,15 +15,33 @@ const Navbar = () => {
     setMobileMenuOpen((prev) => !prev);
   };
 
+  const toggleTheme = () => {
+    setIsLightMode((prev) => !prev);
+  };
+
   return (
     <nav>
       <div className="navbar-header">
         <h1>
           <Link to="/">React Concepts and Demos</Link>
         </h1>
-        <button className="hamburger" onClick={toggleMobileMenu}>
-          &#9776;
-        </button>
+        {/* Theme toggle button */}
+        <div className="navbar-controls-container">
+          <button className="theme-toggle" onClick={toggleTheme}>
+            {isLightMode ? (
+              <span role="img" aria-label="dark mode">
+                🌙
+              </span>
+            ) : (
+              <span role="img" aria-label="light mode">
+                ☀️
+              </span>
+            )}
+          </button>
+          <button className="hamburger" onClick={toggleMobileMenu}>
+            &#9776;
+          </button>
+        </div>
       </div>
       {/* Hooks Section */}
       <div className={`navbar-content ${mobileMenuOpen ? "open" : ""}`}>
