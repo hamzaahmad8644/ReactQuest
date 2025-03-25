@@ -9,12 +9,10 @@
   line-height: 1.5;
   font-weight: 400;
   font-size: 16px;
-  transition: all ease-in-out 250ms;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   --background-color-primary: #242424;
   --background-color-secondary: #212121;
   --background-color-tertiary: #424242;
@@ -25,27 +23,66 @@
   --button-theme-toggle: #424242;
   --error-color: #f44336;
   --code-editor-background: #011627;
+  --selection-background: #ff9800;
+  --selection-text: #000000;
   --border-radius: 0.3rem;
   --button-gap: 1rem;
+  --cursor-primary: url("/public/cursor/SpongeBobCursor.png"), auto;
+  --cursor-pointer: url("../public/cursor/SpongeBobPointer.png"), auto;
 }
 
 :root.light-mode {
-  --background-color-primary: #ffffff; /* white background */
-  --background-color-secondary: #f5f5f5; /* very light gray */
-  --background-color-tertiary: #e0e0e0; /* light gray */
-  --text-color-primary: #333333; /* dark text */
-  --button-primary: #e0e0e0; /* light gray button background */
+  --background-color-primary: #b8b8b8; /* white background */
+  --background-color-secondary: #c6c6c6; /* very light gray */
+  --background-color-tertiary: #b4b4b4; /* light gray */
+  --text-color-primary: #050505; /* dark text */
+  --button-primary: #e2e2e2; /* light gray button background */
   --button-secondary: #ff9800; /* accent color */
-  --button-tertiary: #e0e0e0;
+  --button-tertiary: #dbdbdb;
   --button-theme-toggle: #777777;
   --error-color: #f44336;
-  --code-editor-background: #0060ae;
+  --code-editor-background: #20005776;
+}
+
+/* For selectable text elements, revert to the text cursor  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+p,
+input,
+textarea {
+  cursor: var(--cursor-primary);
+}
+
+input {
+  cursor: text;
+}
+
+::selection {
+  background-color: var(--selection-background);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background-color: var(--selection-background);
+  color: var(--selection-text);
 }
 
 .prism-code {
   font-size: 1rem !important;
   color: var(--text-color-primary) !important;
   background-color: var(--code-editor-background) !important;
+  cursor: text;
+}
+
+.token {
+  cursor: text;
 }
 
 @media (max-width: 768px) {

@@ -20,6 +20,7 @@
   flex-wrap: wrap; /* Wraps items properly */
   align-content: flex-start;
   min-width: 0;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {

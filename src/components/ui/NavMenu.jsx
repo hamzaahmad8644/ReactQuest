@@ -34,21 +34,20 @@ const NavMenu = ({ title, links, isOpen, onToggle }) => {
       </button>
 
       {/* Dropdown Wrapper: Only render if open */}
-      {isOpen && (
-        <div className="nav-list-wrapper">
-          {/* Scrollable Container */}
-          <div className="scrollable" ref={scrollableRef}>
-            <ul className="nav-list">
-              {links.map((link) => (
-                <li key={link.path} onClick={onToggle}>
-                  <Link to={link.path}>{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {showScrollIcon && <span className="scroll-icon">↓</span>}
+
+      <div className={`nav-list-wrapper ${isOpen ? "open" : ""}`}>
+        {/* Scrollable Container */}
+        <div className="scrollable" ref={scrollableRef}>
+          <ul className="nav-list">
+            {links.map((link) => (
+              <li key={link.path} onClick={onToggle}>
+                <Link to={link.path}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+        {showScrollIcon && <span className="scroll-icon">↓</span>}
+      </div>
     </div>
   );
 };

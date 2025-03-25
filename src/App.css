@@ -4,6 +4,12 @@ body {
   box-sizing: border-box;
   color: var(--text-color-primary);
   background-color: var(--background-color-primary);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: var(--cursor-primary);
 }
 
 h1 {
@@ -21,7 +27,6 @@ button {
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: var(--border-radius);
-  cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -31,6 +36,7 @@ button {
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
   margin: 0.3rem;
+  cursor: var(--cursor-pointer);
 }
 
 /* Apply margin only to buttons that are NOT the first child */
@@ -79,6 +85,12 @@ input:focus {
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+}
+
+@media (max-width: 1020px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 890px) {

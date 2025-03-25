@@ -39,7 +39,7 @@ h1 a {
   background: none;
   border: none;
   font-size: 2rem;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   color: var(--text-color-primary);
 }
 
@@ -61,39 +61,39 @@ h1 a {
   color: var(--text-color-primary);
   display: flex;
   align-items: center;
-  cursor: pointer;
   font-weight: bold;
   border-radius: var(--border-radius);
-  transition: ease-in 0.3s ease;
-  -webkit-transition: ease-in 0.3s ease;
-  -moz-transition: ease-in 0.3s ease;
-  -ms-transition: ease-in 0.3s ease;
-  -o-transition: ease-in 0.3s ease;
   -webkit-border-radius: var(--border-radius);
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
+  cursor: var(--cursor-pointer);
 }
 
 .nav-menu:hover {
   background: var(--button-secondary);
 }
 
-/* Dropdown Wrapper */
+/* Default: Dropdown is hidden */
 .nav-list-wrapper {
   position: absolute;
-  top: 100%;
-  /*Directlybelowthebutton*/
+  top: 100%; /* Align directly below the button */
   left: 0;
-  background: var(--background-color-secondary);
   width: max-content;
+  background: var(--background-color-secondary);
   border-radius: var(--border-radius);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
   z-index: 100;
-  -webkit-border-radius: var(--border-radius);
-  -moz-border-radius: var(--border-radius);
-  -ms-border-radius: var(--border-radius);
-  -o-border-radius: var(--border-radius);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Open state: Expand smoothly */
+.nav-list-wrapper.open {
+  transform: scaleY(1);
+  opacity: 1;
 }
 
 /* Scrollable Container for the Dropdown */
@@ -132,6 +132,7 @@ h1 a {
   width: 100%;
   color: var(--text-color-primary);
   padding: 0.8rem 1rem;
+  cursor: var(--cursor-pointer);
 }
 
 .nav-list li:hover {
@@ -200,7 +201,6 @@ h1 a {
 
   /* Make dropdown container static so it pushes content down */
   .nav-list-wrapper {
-    position: static;
     width: 99.2%;
     box-shadow: none;
   }
